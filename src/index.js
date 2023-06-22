@@ -16,8 +16,8 @@ console.log(users);
 
 const newUser = {
   userId: 3,
-  username: "emma_watson",
-  email: "emma@example.com",
+  username: "sara_aldo",
+  email: "sara@example.com",
   role: "user",
 };
 
