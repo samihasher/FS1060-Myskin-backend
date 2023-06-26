@@ -17,3 +17,15 @@ and created a string for first name and last name as follows:
 * console.log('\n===\n');
 
 I then ran "npm start" to test it
+
+## Phase 2
+
+* created a new branch "phase 2"
+* developed two modules: user.js (adding sample users into the web app) and routines.js (building the skincare routines of sample users)
+* assigned for a peer review
+
+## Phase 3
+* Reviewed peer feedback, implemented and updated code accordingly
+* Installed and updated json with Jest
+* Added routines.test.js to test the functions in routines.js using NPM test to ensure that they are exeucting accurately on the number of steps in a given skincare routine
+* Setup a continuous Integration (CI) pipeline using GitHub to automatically check
