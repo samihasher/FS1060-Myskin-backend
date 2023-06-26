@@ -9,7 +9,7 @@ import {
       expect(janeAMSkincare).toHaveLength(5);
     });
   
-    test("John's PM Skincare Routine should have 6 steps", () => {
+    test("Jane's PM Skincare Routine should have 6 steps", () => {
       expect(janePMSkincare).toHaveLength(6);
     });
   
