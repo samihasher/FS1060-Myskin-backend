@@ -26,15 +26,15 @@ console.log(users);
 
 import {
     janeAMSkincare,
-    johnPMSkincare,
+    janePMSkincare,
     johnAMSkincare,
   } from "./routines.js";
   
   console.log("Jane's AM Skincare Routine:");
   console.log(janeAMSkincare);
   
-  console.log("John's PM Skincare Routine:");
-  console.log(johnPMSkincare);
+  console.log("Jane's PM Skincare Routine:");
+  console.log(janePMSkincare);
   
   console.log("John's AM Skincare Routine:");
   console.log(johnAMSkincare);
