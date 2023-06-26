@@ -7,7 +7,7 @@ export const janeAMSkincare = [
     "Sunscreen",
   ];
   
-  // John's PM Skincare routine
+  // Jane's PM Skincare routine
   export const janePMSkincare = [
     "Cleanser",
     "Toner",
