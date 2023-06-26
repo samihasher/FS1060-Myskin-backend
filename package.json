@@ -1,16 +1,14 @@
 {
   "name": "myskin-backend",
-  "type": "module",
   "version": "1.0.0",
-  "description": "For my website's backend I started off by running \"npm init -y\" to create a package.json and then creating the following files: .gitignore and index.js",
+  "description": "",
   "main": "index.js",
+  "type":"module",
   "scripts": {
-    "start": "node index.js",
-    "test": "jest"
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^29.5.0"
-  }}
+  "license": "ISC"
+}
