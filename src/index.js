@@ -1,13 +1,3 @@
-console.log('hello world');
-
-
-let firstname = "samiha"
-let lastname = "sher"
-let finalString = firstname + "," + " " + lastname
-console.log('finalString:', finalString);
-
-console.log('\n===\n');
-
 
 import { getUsers, addUser } from "./users.js";
 
@@ -26,15 +16,15 @@ console.log(users);
 
 import {
     janeAMSkincare,
-    johnPMSkincare,
+    janePMSkincare,
     johnAMSkincare,
   } from "./routines.js";
   
   console.log("Jane's AM Skincare Routine:");
   console.log(janeAMSkincare);
   
-  console.log("John's PM Skincare Routine:");
-  console.log(johnPMSkincare);
+  console.log("Jane's PM Skincare Routine:");
+  console.log(janePMSkincare);
   
   console.log("John's AM Skincare Routine:");
   console.log(johnAMSkincare);
