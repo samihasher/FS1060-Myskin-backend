@@ -1,5 +1,7 @@
 
 import { getUsers, addUser } from "./users.js";
+require('dotenv').config();
+
 
 const users = getUsers();
 console.log(users);
