@@ -13,16 +13,16 @@ let users = [
     },
   ];
   
-  // Function to get the users array
-  export const getUsers = () => {
-    return users;
-  };
+  // // Function to get the users array
+  // export const getUsers = () => {
+  //   return users;
+  // };
   
-  // Function to add a new user to the array
-  export const addUser = (user) => {
-    users.push(user);
-  };
+  // // Function to add a new user to the array
+  // export const addUser = (user) => {
+  //   users.push(user);
+  // };
   
-  
+
   
   

@@ -1,35 +1,37 @@
+import express from 'express';
+import routinesRoutes from './Routes/routinesRoutes.js';
+import userRoutes from './Routes/userRoutes.js';
 
-import { getUsers, addUser } from "./users.js";
+
+
+const app = express();
+const port = process.env.PORT || 3000;
+const db = require('./Database/database.js');
 require('dotenv').config();
 
+async function getUsers() {
+  try {
+    const [rows] = await db.query('SELECT * FROM users');
+    console.log('Users:', rows);
+  } catch (err) {
+    console.error('Error fetching users:', err);
+  }
+}
 
-const users = getUsers();
-console.log(users);
+app.use('/routines', routinesRoutes);
 
-const newUser = {
-  userId: 3,
-  username: "sara_aldo",
-  email: "sara@example.com",
-  role: "user",
-};
-
-addUser(newUser);
-console.log(users);
-
-import {
-    janeAMSkincare,
-    janePMSkincare,
-    johnAMSkincare,
-  } from "./routines.js";
-  
-  console.log("Jane's AM Skincare Routine:");
-  console.log(janeAMSkincare);
-  
-  console.log("Jane's PM Skincare Routine:");
-  console.log(janePMSkincare);
-  
-  console.log("John's AM Skincare Routine:");
-  console.log(johnAMSkincare);
-
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
   
 
+  getUsers();
+
+  const newUser = {
+    userId: 3,
+    username: "sara_aldo",
+    email: "sara@example.com",
+    role: "user",
+  };
+  
+
+});
