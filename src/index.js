@@ -1,43 +1,37 @@
-console.log('hello world');
+import express from 'express';
+import routinesRoutes from './Routes/routinesRoutes.js';
+import userRoutes from './Routes/userRoutes.js';
 
 
-let firstname = "samiha"
-let lastname = "sher"
-let finalString = firstname + "," + " " + lastname
-console.log('finalString:', finalString);
 
-console.log('\n===\n');
+const app = express();
+const port = process.env.PORT || 3000;
+const db = require('./Database/database.js');
+require('dotenv').config();
 
+async function getUsers() {
+  try {
+    const [rows] = await db.query('SELECT * FROM users');
+    console.log('Users:', rows);
+  } catch (err) {
+    console.error('Error fetching users:', err);
+  }
+}
 
-import { getUsers, addUser } from "./users.js";
+app.use('/routines', routinesRoutes);
 
-const users = getUsers();
-console.log(users);
-
-const newUser = {
-  userId: 3,
-  username: "sara_aldo",
-  email: "sara@example.com",
-  role: "user",
-};
-
-addUser(newUser);
-console.log(users);
-
-import {
-    janeAMSkincare,
-    johnPMSkincare,
-    johnAMSkincare,
-  } from "./routines.js";
-  
-  console.log("Jane's AM Skincare Routine:");
-  console.log(janeAMSkincare);
-  
-  console.log("John's PM Skincare Routine:");
-  console.log(johnPMSkincare);
-  
-  console.log("John's AM Skincare Routine:");
-  console.log(johnAMSkincare);
-
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
   
 
+  getUsers();
+
+  const newUser = {
+    userId: 3,
+    username: "sara_aldo",
+    email: "sara@example.com",
+    role: "user",
+  };
+  
+
+});
